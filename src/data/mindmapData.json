@@ -1,0 +1,34 @@
+{
+  "nodes": [
+    {
+      "id": "root",
+      "label": "Vitamins in Human Body",
+      "summary": "Essential micronutrients for body functions",
+      "details": "Vitamins are essential micronutrients required for normal metabolic function, growth, immune defense, and cellular repair."
+    },
+    {
+      "id": "classification",
+      "label": "Vitamin Classification",
+      "summary": "Fat & Water soluble",
+      "parent": "root"
+    },
+    {
+      "id": "roles",
+      "label": "Key Bodily Roles",
+      "summary": "Metabolism, immunity, repair",
+      "parent": "root"
+    },
+    {
+      "id": "sources",
+      "label": "Dietary Sources",
+      "summary": "Fruits, vegetables, dairy",
+      "parent": "root"
+    },
+    {
+      "id": "health",
+      "label": "Health Impact & Balance",
+      "summary": "Deficiency & toxicity",
+      "parent": "root"
+    }
+  ]
+}

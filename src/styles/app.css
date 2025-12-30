@@ -1,0 +1,151 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* App Wrapper */
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Toolbar */
+.toolbar {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 16px;
+  background: #111827;
+}
+
+/* Toolbar buttons – restored colors */
+.toolbar button {
+  background: #0ea5e9;          /* Blue */
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toolbar button:hover {
+  background: #0284c7;
+}
+
+/* Primary button (Full Documentation) */
+.toolbar .primary {
+  background: #22c55e;          /* Green */
+}
+
+.toolbar .primary:hover {
+  background: #16a34a;
+}
+
+/* Layout: Mindmap + Sidebar */
+.layout {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+/* Mindmap takes remaining space */
+.mindmap {
+  flex: 1;
+  min-width: 0; /* IMPORTANT: prevents overflow */
+  height: 100%;
+  background: radial-gradient(#334155 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.node-tooltip {
+  position: absolute;
+  z-index: 9999;
+  max-width: 220px;
+  padding: 8px 10px;
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+  display: none;
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: 340px;
+  min-width: 280px;
+  max-width: 35%;
+  height: 100%;
+  padding: 16px;
+  background: #1e293b;
+  border-left: 1px solid #334155;
+  overflow-y: auto;
+}
+
+/* -----------------------------
+   Tablet (≤ 1024px)
+------------------------------ */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 300px;
+    max-width: 40%;
+  }
+}
+
+/* -----------------------------
+   Mobile (≤ 768px)
+------------------------------ */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .mindmap {
+    width: 100%;
+    height: 65%;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    height: 35%;
+    border-left: none;
+    border-top: 1px solid #334155;
+  }
+
+  .toolbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+}
+
+/* -----------------------------
+   Small Mobile (≤ 480px)
+------------------------------ */
+@media (max-width: 480px) {
+  .mindmap {
+    height: 60%;
+  }
+
+  .sidebar {
+    height: 40%;
+    padding: 12px;
+  }
+
+  .toolbar button {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
